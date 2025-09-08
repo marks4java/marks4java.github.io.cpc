@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Worship Attendance Counter</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 16px;
+            font-family: Roboto, sans-serif;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .card {
+            background: white;
+            border-radius: 8px;
+            padding: 16px;
+            margin-bottom: 16px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .section-header {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            user-select: none;
+        }
+        .section-content {
+            padding: 16px 0;
+            display: none;
+        }
+        .section-content.active {
+            display: block;
+        }
+        .input-field {
+            margin-bottom: 16px;
+            width: 100%;
+        }
+        .total-section {
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            padding: 16px;
+            background: #1976d2;
+            color: white;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="mdc-typography--headline4">Worship Attendance Counter</h1>
+        
+        <div class="card">
+            <div class="section-header" onclick="toggleSection('bleacher')">
+                <i class="material-icons">expand_more</i>
+                <h2 class="mdc-typography--headline6">Bleacher Sections</h2>
+            </div>
+            <div id="bleacher" class="section-content active">
+                <div class="mdc-text-field mdc-text-field--outlined input-field">
+                    <input type="number" class="mdc-text-field__input" id="bleacher1" value="0" onchange="updateTotal()">
+                    <div class="mdc-notched-outline">
+                        <div class="mdc-notched-outline__leading"></div>
+                        <div class="mdc-notched-outline__notch">
+                            <label class="mdc-floating-label">Bleacher Section 1</label>
+                        </div>
+                        <div class="mdc-notched-outline__trailing"></div>
+                    </div>
+                </div>
+                <!-- Repeat for Bleacher Sections 2-6 -->
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="section-header" onclick="toggleSection('floor')">
+                <i class="material-icons">expand_more</i>
+                <h2 class="mdc-typography--headline6">Floor Sections</h2>
+            </div>
+            <div id="floor" class="section-content">
+                <div class="mdc-text-field mdc-text-field--outlined input-field">
+                    <input type="number" class="mdc-text-field__input" id="floor1" value="0" onchange="updateTotal()">
+                    <div class="mdc-notched-outline">
+                        <div class="mdc-notched-outline__leading"></div>
+                        <div class="mdc-notched-outline__notch">
+                            <label class="mdc-floating-label">Floor Section 1</label>
+                        </div>
+                        <div class="mdc-notched-outline__trailing"></div>
+                    </div>
+                </div>
+                <!-- Repeat for Floor Section 2 -->
+            </div>
+        </div>
+
+        <div class="total-section">
+            Total Attendance: <span id="total">0</span>
+        </div>
+    </div>
+
+    <script>
+        // Initialize Material Components
+        document.querySelectorAll('.mdc-text-field').forEach(textField => {
+            mdc.textField.MDCTextField.attachTo(textField);
+        });
+
+        function toggleSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            section.classList.toggle('active');
+        }
+
+        function updateTotal() {
+            let total = 0;
+            // Sum bleacher sections
+            for (let i = 1; i <= 6; i++) {
+                const value = parseInt(document.getElementById(`bleacher${i}`).value) || 0;
+                total += value;
+            }
+            // Sum floor sections
+            for (let i = 1; i <= 2; i++) {
+                const value = parseInt(document.getElementById(`floor${i}`).value) || 0;
+                total += value;
+            }
+            document.getElementById('total').textContent = total;
+        }
+
+        // Initial total calculation
+        updateTotal();
+    </script>
+</body>
+</html>
