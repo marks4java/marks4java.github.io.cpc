@@ -52,7 +52,7 @@
             gap: 12px;
             /* Smoothly animates when keyboard opens/closes */
             transform: translateY(0);
-            transition: transform 160ms ease;
+            transition: transform 25ms ease;
             /* Respect notches / home indicators */
             padding-bottom: calc(12px + env(safe-area-inset-bottom, 0px));
             z-index: 9999;
@@ -193,12 +193,8 @@
                     </div>
                 </div>
             </div>
-            <div class="total-section">
+            <div class="total-section bottom-bar">
                 Total Attendance: <span id="total">-</span>
-            </div>
-            <!-- Bottom action bar -->
-            <div id="bottomBar" class="bottom-bar">
-                <button>Continue</button>
             </div>
         </div>
     </div>
