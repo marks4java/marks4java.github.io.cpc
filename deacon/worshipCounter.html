@@ -51,37 +51,73 @@
       border: 1px solid #ccc;
       border-radius: 8px;
     }
+    details {
+      margin-top: 15px;
+      margin-bottom: 10px;
+      border-radius: 8px;
+      border: 1px solid #e0e0e0;
+      background: #fffde6;
+      padding: 8px 0 0 0;
+    }
+    summary {
+      font-weight: bold;
+      font-size: 15px;
+      padding: 8px 16px;
+      cursor: pointer;
+      color: #002080;
+      border-radius: 8px;
+      outline: none;
+      user-select: none;
+    }
+    details[open] summary {
+      background: #f0f8ff;
+    }
+    .fields {
+      padding: 0 16px 10px 16px;
+    }
   </style>
 </head>
 <body>
   <div class="container">
     <h2>Worship Attendance Counter</h2>
 
-    <!-- Input fields -->
-    <label for="section1">Bleacher Section 1:</label>
-    <input type="number" id="section1"  />
+    <!-- Collapsible Bleacher Section -->
+    <details open>
+      <summary>Bleacher Sections</summary>
+      <div class="fields">
+        <label for="section1">Bleacher Section 1:</label>
+        <input type="number" id="section1"  />
 
-    <label for="section2">Bleacher Section 2:</label>
-    <input type="number" id="section2"  />
+        <label for="section2">Bleacher Section 2:</label>
+        <input type="number" id="section2"  />
 
-    <label for="section3">Bleacher Section 3:</label>
-    <input type="number" id="section3"  />
+        <label for="section3">Bleacher Section 3:</label>
+        <input type="number" id="section3"  />
 
-    <label for="section4">Bleacher Section 4:</label>
-    <input type="number" id="section4"  />
+        <label for="section4">Bleacher Section 4:</label>
+        <input type="number" id="section4"  />
 
-    <label for="section5">Bleacher Section 5:</label>
-    <input type="number" id="section5"  />
+        <label for="section5">Bleacher Section 5:</label>
+        <input type="number" id="section5"  />
 
-    <label for="section6">Bleacher Section 6:</label>
-    <input type="number" id="section6"  />
+        <label for="section6">Bleacher Section 6:</label>
+        <input type="number" id="section6"  />
+      </div>
+    </details>
 
-    <label for="floor1">Floor 1:</label>
-    <input type="number" id="floor1"  />
+    <!-- Collapsible Floor Section -->
+    <details open>
+      <summary>Floor Sections</summary>
+      <div class="fields">
+        <label for="floor1">Floor 1:</label>
+        <input type="number" id="floor1"  />
 
-    <label for="floor2">Floor 2:</label>
-    <input type="number" id="floor2"  />
+        <label for="floor2">Floor 2:</label>
+        <input type="number" id="floor2"  />
+      </div>
+    </details>
 
+    <!-- Worship Team (not collapsible) -->
     <label for="worshipTeam">Worship Team:</label>
     <input type="number" id="worshipTeam"  />
 
