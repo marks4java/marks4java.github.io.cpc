@@ -73,7 +73,61 @@
                         <div class="mdc-notched-outline__trailing"></div>
                     </div>
                 </div>
-                <!-- Repeat for Bleacher Sections 2-6 -->
+                <div class="mdc-text-field mdc-text-field--outlined input-field">
+                    <input type="number" class="mdc-text-field__input" id="bleacher2" value="0" onchange="updateTotal()">
+                    <div class="mdc-notched-outline">
+                        <div class="mdc-notched-outline__leading"></div>
+                        <div class="mdc-notched-outline__notch">
+                            <label class="mdc-floating-label">Bleacher Section 2</label>
+                        </div>
+                        <div class="mdc-notched-outline__trailing"></div>
+                    </div>
+                </div>
+
+                <div class="mdc-text-field mdc-text-field--outlined input-field">
+                    <input type="number" class="mdc-text-field__input" id="bleacher3" value="0" onchange="updateTotal()">
+                    <div class="mdc-notched-outline">
+                        <div class="mdc-notched-outline__leading"></div>
+                        <div class="mdc-notched-outline__notch">
+                            <label class="mdc-floating-label">Bleacher Section 3</label>
+                        </div>
+                        <div class="mdc-notched-outline__trailing"></div>
+                    </div>
+                </div>
+
+                <div class="mdc-text-field mdc-text-field--outlined input-field">
+                    <input type="number" class="mdc-text-field__input" id="bleacher4" value="0" onchange="updateTotal()">
+                    <div class="mdc-notched-outline">
+                        <div class="mdc-notched-outline__leading"></div>
+                        <div class="mdc-notched-outline__notch">
+                            <label class="mdc-floating-label">Bleacher Section 4</label>
+                        </div>
+                        <div class="mdc-notched-outline__trailing"></div>
+                    </div>
+                </div>
+
+                <div class="mdc-text-field mdc-text-field--outlined input-field">
+                    <input type="number" class="mdc-text-field__input" id="bleacher5" value="0" onchange="updateTotal()">
+                    <div class="mdc-notched-outline">
+                        <div class="mdc-notched-outline__leading"></div>
+                        <div class="mdc-notched-outline__notch">
+                            <label class="mdc-floating-label">Bleacher Section 5</label>
+                        </div>
+                        <div class="mdc-notched-outline__trailing"></div>
+                    </div>
+                </div>
+
+                <div class="mdc-text-field mdc-text-field--outlined input-field">
+                    <input type="number" class="mdc-text-field__input" id="bleacher6" value="0" onchange="updateTotal()">
+                    <div class="mdc-notched-outline">
+                        <div class="mdc-notched-outline__leading"></div>
+                        <div class="mdc-notched-outline__notch">
+                            <label class="mdc-floating-label">Bleacher Section 6</label>
+                        </div>
+                        <div class="mdc-notched-outline__trailing"></div>
+                    </div>
+                </div>
+            </div>
             </div>
         </div>
 
@@ -93,7 +147,16 @@
                         <div class="mdc-notched-outline__trailing"></div>
                     </div>
                 </div>
-                <!-- Repeat for Floor Section 2 -->
+                <div class="mdc-text-field mdc-text-field--outlined input-field">
+                    <input type="number" class="mdc-text-field__input" id="floor2" value="0" onchange="updateTotal()">
+                    <div class="mdc-notched-outline">
+                        <div class="mdc-notched-outline__leading"></div>
+                        <div class="mdc-notched-outline__notch">
+                            <label class="mdc-floating-label">Floor Section 2</label>
+                        </div>
+                        <div class="mdc-notched-outline__trailing"></div>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -116,7 +179,7 @@
         function updateTotal() {
             let total = 0;
             // Sum bleacher sections
-            for (let i = 1; i <= 2; i++) {
+            for (let i = 1; i <= 6; i++) {
                 const value = parseInt(document.getElementById(`bleacher${i}`).value) || 0;
                 total += value;
             }
