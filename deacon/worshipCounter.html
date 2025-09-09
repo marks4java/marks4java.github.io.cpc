@@ -68,18 +68,18 @@
             left: 0;
             right: 0;
             bottom: 0;                 /* natural resting place */
-            padding: 16px;
+            padding: 12px 16px;
             background: #1976d2;
             color: white;
             border-radius: 8px;
             display: flex;
             font-size: 24px;
             font-weight: bold;
-            text-align: center;
+            justify-content: center;
             gap: 12px;
             /* Smoothly animates when keyboard opens/closes */
             transform: translateY(0);
-            transition: transform 25ms ease;
+            transition: transform 0ms ease;
             /* Respect notches / home indicators */
             padding-bottom: calc(12px + env(safe-area-inset-bottom, 0px));
             z-index: 9999;
