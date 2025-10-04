@@ -183,431 +183,415 @@
     <main class="wrap">
       <form id="handyman-form" aria-describedby="privacy">
         <!-- 1. Personal Information -->
-          <div class="col-12 section-note">
-            <strong>1) Contact Information</strong>
+        <div class="col-12 section-note">
+          <strong>1) Contact Information</strong>
+        </div>
+        <div class="">
+          <div class="col-6">
+            <label for="fullName" class="required">Full Name</label>
+            <input
+              id="fullName"
+              name="fullName"
+              autocomplete="name"
+              type="text"
+              required
+            />
+          </div>
+          <div class="col-6">
+            <label for="phone" class="required">Phone (best number)</label>
+            <input
+              id="phone"
+              name="phone"
+              type="tel"
+              inputmode="tel"
+              autocomplete="tel"
+              required
+              placeholder="e.g., (555) 555-1234"
+            />
+          </div>
+          <div class="col-6">
+            <label for="email">Email (optional)</label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              inputmode="email"
+              autocomplete="email"
+              placeholder="name@example.org"
+            />
+          </div>
+          <div class="col-6">
+            <legend>Preferred Contact Method</legend>
+
+            <div class="col-6">
+              <div>
+                <input
+                  type="radio"
+                  id="phone"
+                  name="contactMethod"
+                  value="Phone call"
+                  required
+                />
+                Phone call
+              </div>
+            </div>
+
+            <div class="col-6">
+              <div>
+                <input
+                  type="radio"
+                  id="text"
+                  name="contactMethod"
+                  value="Text Message"
+                  required
+                />
+                Text Message
+              </div>
+            </div>
+
+            <div class="col-6">
+              <div>
+                <input
+                  type="radio"
+                  id="email"
+                  name="contactMethod"
+                  value="email"
+                  required
+                />
+                Email
+              </div>
+            </div>
+
+            <div class="col-6">
+              <div>
+                <input
+                  type="radio"
+                  id="none"
+                  name="contactMethod"
+                  value="No Preference"
+                  required
+                />
+                No Preference
+              </div>
+            </div>
+          </div>
+        </div>
+        <br />
+        <div class="col-12 section-note">
+          <strong>2) Location Information</strong>
+        </div>
+        <div class="">
+          <div class="">
+            <label for="street" class="required">Street Address</label>
+            <input
+              id="street"
+              name="street"
+              type="text"
+              autocomplete="address-line1"
+              required
+            />
           </div>
           <div class="">
-            <div class="col-6">
-              <label for="fullName" class="required">Full Name</label>
-              <input
-                id="fullName"
-                name="fullName"
-                autocomplete="name"
-                type="text"
-                required
-              />
-            </div>
-            <div class="col-6">
-              <label for="phone" class="required">Phone (best number)</label>
-              <input
-                id="phone"
-                name="phone"
-                type="tel"
-                inputmode="tel"
-                autocomplete="tel"
-                required
-                placeholder="e.g., (555) 555-1234"
-              />
-            </div>
-            <div class="col-6">
-              <label for="email">Email (optional)</label>
-              <input
-                id="email"
-                name="email"
-                type="email"
-                inputmode="email"
-                autocomplete="email"
-                placeholder="name@example.org"
-              />
-            </div>
-            <div class="col-6">
-              <legend>Preferred Contact Method</legend>
-
-              <div class="col-6">
-                <div>
-                  <input
-                    type="radio"
-                    id="phone"
-                    name="contactMethod"
-                    value="Phone call"
-                    required
-                  />
-                  Phone call
-                </div>
-              </div>
-
-              <div class="col-6">
-                <div>
-                  <input
-                    type="radio"
-                    id="text"
-                    name="contactMethod"
-                    value="Text Message"
-                    required
-                  />
-                  Text Message
-                </div>
-              </div>
-
-              <div class="col-6">
-                <div>
-                  <input
-                    type="radio"
-                    id="email"
-                    name="contactMethod"
-                    value="email"
-                    required
-                  />
-                  Email
-                </div>
-              </div>
-
-              <div class="col-6">
-                <div>
-                  <input
-                    type="radio"
-                    id="none"
-                    name="contactMethod"
-                    value="No Preference"
-                    required
-                  />
-                  No Preference
-                </div>
-              </div>
-            </div>
-          </div>
-          <br>
-          <div class="col-12 section-note">
-            <strong>2) Location Information</strong>
+            <label for="unit">Apt/Unit (optional)</label>
+            <input
+              id="unit"
+              name="unit"
+              type="text"
+              autocomplete="address-line2"
+            />
           </div>
           <div class="">
-            <div class="">
-              <label for="street" class="required">Street Address</label>
-              <input
-                id="street"
-                name="street"
-                type="text"
-                autocomplete="address-line1"
-                required
-              />
-            </div>
-            <div class="">
-              <label for="unit">Apt/Unit (optional)</label>
-              <input
-                id="unit"
-                name="unit"
-                type="text"
-                autocomplete="address-line2"
-              />
-            </div>
-            <div class="">
-              <label for="city" class="required">City</label>
-              <input
-                id="city"
-                name="city"
-                type="text"
-                autocomplete="address-level2"
-                required
-              />
-            </div>
-            <div class="">
-              <label for="state" class="required">State</label>
-              <input
-                id="state"
-                name="state"
-                type="text"
-                maxlength="2"
-                placeholder="e.g., NY"
-                required
-              />
-            </div>
-            <div class="">
-              <label for="zip" class="required">ZIP</label>
-              <input
-                id="zip"
-                name="zip"
-                type="text"
-                inputmode="numeric"
-                pattern="[0-9]{5}"
-                placeholder="e.g., 12345"
-                required
-              />
-            </div>
-            <div>
-                <label for="description">Location Notes</label>
-              <textarea
-                id="description"
-                name="description"
-                required
-                placeholder="Notes About Location (parking, entrance, etc...)"
-              ></textarea>
-            </div>
+            <label for="city" class="required">City</label>
+            <input
+              id="city"
+              name="city"
+              type="text"
+              autocomplete="address-level2"
+              required
+            />
           </div>
-
+          <div class="">
+            <label for="state" class="required">State</label>
+            <input
+              id="state"
+              name="state"
+              type="text"
+              maxlength="2"
+              placeholder="e.g., NY"
+              required
+            />
+          </div>
+          <div class="">
+            <label for="zip" class="required">ZIP</label>
+            <input
+              id="zip"
+              name="zip"
+              type="text"
+              inputmode="numeric"
+              pattern="[0-9]{5}"
+              placeholder="e.g., 12345"
+              required
+            />
+          </div>
+          <div>
+            <label for="description">Location Notes</label>
+            <textarea
+              id="description"
+              name="description"
+              required
+              placeholder="Notes about location (parking, entrance, etc...)"
+            ></textarea>
+          </div>
+        </div>
+        <br />
 
         <!-- 3. Request Details -->
 
-          <legend>3) What do you need help with?</legend>
-          <div class="">
-            <div class="col-12">
-              <label class="required">Category (choose all that apply)</label>
-              <div class="inline" role="group" aria-label="Issue categories">
-                <label class="chip"
-                  ><input type="checkbox" name="category" value="Plumbing" />
-                  Plumbing</label
-                >
-                <label class="chip"
-                  ><input type="checkbox" name="category" value="Electrical" />
-                  Electrical</label
-                >
-                <label class="chip"
-                  ><input type="checkbox" name="category" value="Carpentry" />
-                  Carpentry</label
-                >
-                <label class="chip"
-                  ><input
-                    type="checkbox"
-                    name="category"
-                    value="Appliance repair"
-                  />
-                  Appliance</label
-                >
-                <label class="chip"
-                  ><input type="checkbox" name="category" value="Yard work" />
-                  Yard work</label
-                >
-                <label class="chip"
-                  ><input
-                    type="checkbox"
-                    name="category"
-                    value="General maintenance"
-                  />
-                  General</label
-                >
-                <label class="chip">
-                  <input
-                    type="checkbox"
-                    id="catOther"
-                    name="category"
-                    value="Other"
-                  />
-                  Other
-                </label>
-              </div>
-            </div>
-            <div class="col-12" id="otherWrap" style="display: none">
-              <label for="otherText">If “Other”, please specify</label>
-              <input id="otherText" name="otherText" />
-            </div>
-            <div class="col-12">
-              <label for="description" class="required"
-                >Describe the problem</label
+        <div class="col-12 section-note">
+          <strong>3) How Can We Help?</strong>
+        </div>
+        <div class="">
+          <div class="col-12">
+            <label class="required">Category (choose all that apply)</label>
+            <div class="inline" role="group" aria-label="Issue categories">
+              <label class="chip"
+                ><input type="checkbox" name="category" value="Plumbing" />
+                Plumbing</label
               >
-              <textarea
-                id="description"
-                name="description"
-                required
-                placeholder="Briefly explain what's wrong and where it is in the home."
-              ></textarea>
-            </div>
-            <div class="col-6">
-              <label for="urgency" class="required">Urgency</label>
-              <select id="urgency" name="urgency" required>
-                <option value="">— Select —</option>
-                <option>Emergency (safety/water/electrical)</option>
-                <option>Within a week</option>
-                <option>No rush</option>
-              </select>
-            </div>
-            <div class="col-6">
-              <label for="budget">Parts or materials on hand? (optional)</label>
-              <input
-                id="budget"
-                name="budget"
-                placeholder="e.g., Have spare faucet; need new light bulb"
-              />
-            </div>
-            <div class="col-12">
-              <label for="photos">Photos (optional)</label>
-              <input
-                id="photos"
-                name="photos"
-                type="file"
-                accept="image/*"
-                multiple
-              />
-              <small class="hint"
-                >Clear, well-lit photos help us prepare.</small
+              <label class="chip"
+                ><input type="checkbox" name="category" value="Electrical" />
+                Electrical</label
               >
+              <label class="chip"
+                ><input type="checkbox" name="category" value="Carpentry" />
+                Carpentry</label
+              >
+              <label class="chip"
+                ><input
+                  type="checkbox"
+                  name="category"
+                  value="Appliance repair"
+                />
+                Appliance</label
+              >
+              <label class="chip"
+                ><input type="checkbox" name="category" value="Yard work" />
+                Yard work</label
+              >
+              <label class="chip"
+                ><input
+                  type="checkbox"
+                  name="category"
+                  value="General maintenance"
+                />
+                General</label
+              >
+              <label class="chip">
+                <input
+                  type="checkbox"
+                  id="catOther"
+                  name="category"
+                  value="Other"
+                />
+                Other
+              </label>
             </div>
           </div>
-
+          <div class="col-12" id="otherWrap" style="display: none">
+            <label for="otherText">If “Other”, please specify</label>
+            <input id="otherText" name="otherText" />
+          </div>
+          <div class="col-12">
+            <label for="description" class="required"
+              >Describe the problem</label
+            >
+            <textarea
+              id="description"
+              name="description"
+              required
+              placeholder="Briefly explain what's wrong and where it is in the home."
+            ></textarea>
+          </div>
+          <div class="col-6">
+            <label for="urgency" class="required">Urgency</label>
+            <select id="urgency" name="urgency" required>
+              <option value="">— Select —</option>
+              <option>Emergency (safety/water/electrical)</option>
+              <option>Within a week</option>
+              <option>No rush</option>
+            </select>
+          </div>
+          <div class="col-6">
+            <label for="budget">Parts or materials on hand? (optional)</label>
+            <input
+              id="budget"
+              name="budget"
+              placeholder="e.g., Have spare faucet; need new light bulb"
+            />
+          </div>
+          <div class="col-12">
+            <label for="photos">Photos (optional)</label>
+            <input
+              id="photos"
+              name="photos"
+              type="file"
+              accept="image/*"
+              multiple
+            />
+            <small class="hint">Clear, well-lit photos help us prepare.</small>
+          </div>
+        </div>
 
         <!-- 4. Scheduling -->
 
-          <legend>4) Scheduling preferences</legend>
-          <div class="">
-            <div class="col-12">
-              <label>Best times (choose any)</label>
-              <div class="inline" role="group">
-                <label class="chip"
-                  ><input
-                    type="checkbox"
-                    name="times"
-                    value="Weekday mornings"
-                  />
-                  Weekday mornings</label
-                >
-                <label class="chip"
-                  ><input
-                    type="checkbox"
-                    name="times"
-                    value="Weekday afternoons"
-                  />
-                  Weekday afternoons</label
-                >
-                <label class="chip"
-                  ><input
-                    type="checkbox"
-                    name="times"
-                    value="Weekday evenings"
-                  />
-                  Weekday evenings</label
-                >
-                <label class="chip"
-                  ><input type="checkbox" name="times" value="Saturday" />
-                  Saturday</label
-                >
-                <label class="chip"
-                  ><input
-                    type="checkbox"
-                    name="times"
-                    value="Sunday (after church)"
-                  />
-                  Sunday (after church)</label
-                >
-              </div>
-            </div>
-            <div class="col-12">
-              <label for="availabilityNotes"
-                >Availability notes (optional)</label
+        <legend>4) Scheduling preferences</legend>
+        <div class="">
+          <div class="col-12">
+            <label>Best times (choose any)</label>
+            <div class="inline" role="group">
+              <label class="chip"
+                ><input type="checkbox" name="times" value="Weekday mornings" />
+                Weekday mornings</label
               >
-              <textarea
-                id="availabilityNotes"
-                name="availabilityNotes"
-                placeholder="e.g., Mornings only; medical appt Thursdays"
-              ></textarea>
+              <label class="chip"
+                ><input
+                  type="checkbox"
+                  name="times"
+                  value="Weekday afternoons"
+                />
+                Weekday afternoons</label
+              >
+              <label class="chip"
+                ><input type="checkbox" name="times" value="Weekday evenings" />
+                Weekday evenings</label
+              >
+              <label class="chip"
+                ><input type="checkbox" name="times" value="Saturday" />
+                Saturday</label
+              >
+              <label class="chip"
+                ><input
+                  type="checkbox"
+                  name="times"
+                  value="Sunday (after church)"
+                />
+                Sunday (after church)</label
+              >
             </div>
           </div>
-
+          <div class="col-12">
+            <label for="availabilityNotes">Availability notes (optional)</label>
+            <textarea
+              id="availabilityNotes"
+              name="availabilityNotes"
+              placeholder="e.g., Mornings only; medical appt Thursdays"
+            ></textarea>
+          </div>
+        </div>
 
         <!-- 5. Safety & Access -->
 
-          <legend>5) Safety & access</legend>
-          <div class="">
-            <div class="col-6">
-              <label for="pets" class="required">Pets on property?</label>
-              <select id="pets" name="pets" required>
-                <option value="">— Select —</option>
-                <option>No</option>
-                <option>Yes</option>
-              </select>
-            </div>
-            <div class="col-6" id="petDetailsWrap" style="display: none">
-              <label for="petDetails">Pet details</label>
-              <input
-                id="petDetails"
-                name="petDetails"
-                placeholder="e.g., Friendly lab; will be crated"
-              />
-            </div>
-            <div class="col-6">
-              <label for="gated" class="required"
-                >Gated entry or code needed?</label
-              >
-              <select id="gated" name="gated" required>
-                <option value="">— Select —</option>
-                <option>No</option>
-                <option>Yes</option>
-              </select>
-            </div>
-            <div class="col-6" id="gateWrap" style="display: none">
-              <label for="gateCode">Gate/entry instructions</label>
-              <input id="gateCode" name="gateCode" autocomplete="off" />
-              <small class="hint"
-                >This is shared only with assigned volunteers.</small
-              >
-            </div>
-            <div class="col-12">
-              <label for="hazards"
-                >Any safety concerns we should know? (optional)</label
-              >
-              <textarea
-                id="hazards"
-                name="hazards"
-                placeholder="e.g., Slippery steps; breaker trips; unstable railing"
-              ></textarea>
-            </div>
+        <legend>5) Safety & access</legend>
+        <div class="">
+          <div class="col-6">
+            <label for="pets" class="required">Pets on property?</label>
+            <select id="pets" name="pets" required>
+              <option value="">— Select —</option>
+              <option>No</option>
+              <option>Yes</option>
+            </select>
           </div>
-
+          <div class="col-6" id="petDetailsWrap" style="display: none">
+            <label for="petDetails">Pet details</label>
+            <input
+              id="petDetails"
+              name="petDetails"
+              placeholder="e.g., Friendly lab; will be crated"
+            />
+          </div>
+          <div class="col-6">
+            <label for="gated" class="required"
+              >Gated entry or code needed?</label
+            >
+            <select id="gated" name="gated" required>
+              <option value="">— Select —</option>
+              <option>No</option>
+              <option>Yes</option>
+            </select>
+          </div>
+          <div class="col-6" id="gateWrap" style="display: none">
+            <label for="gateCode">Gate/entry instructions</label>
+            <input id="gateCode" name="gateCode" autocomplete="off" />
+            <small class="hint"
+              >This is shared only with assigned volunteers.</small
+            >
+          </div>
+          <div class="col-12">
+            <label for="hazards"
+              >Any safety concerns we should know? (optional)</label
+            >
+            <textarea
+              id="hazards"
+              name="hazards"
+              placeholder="e.g., Slippery steps; breaker trips; unstable railing"
+            ></textarea>
+          </div>
+        </div>
 
         <!-- 6. Spiritual/Fellowship (optional) -->
 
-          <legend>6) Care & follow-up (optional)</legend>
-          <div class="">
-            <div class="col-6">
-              <label for="updates">Receive ministry updates?</label>
-              <select id="updates" name="updates">
-                <option value="">— Select —</option>
-                <option>Yes, by email</option>
-                <option>Yes, by text</option>
-                <option>No, thank you</option>
-              </select>
-            </div>
-            <div class="col-6">
-              <label for="prayer"
-                >Would you like prayer or a pastoral visit?</label
-              >
-              <select id="prayer" name="prayer">
-                <option value="">— Select —</option>
-                <option>Prayer over the phone</option>
-                <option>Prayer during visit</option>
-                <option>Pastoral visit</option>
-                <option>No, thank you</option>
-              </select>
-            </div>
-            <div class="col-12" id="careNotesWrap" style="display: none">
-              <label for="careNotes">Care notes (optional)</label>
-              <textarea
-                id="careNotes"
-                name="careNotes"
-                placeholder="Anything you’d like us to know or pray for"
-              ></textarea>
-            </div>
+        <legend>6) Care & follow-up (optional)</legend>
+        <div class="">
+          <div class="col-6">
+            <label for="updates">Receive ministry updates?</label>
+            <select id="updates" name="updates">
+              <option value="">— Select —</option>
+              <option>Yes, by email</option>
+              <option>Yes, by text</option>
+              <option>No, thank you</option>
+            </select>
           </div>
-
+          <div class="col-6">
+            <label for="prayer"
+              >Would you like prayer or a pastoral visit?</label
+            >
+            <select id="prayer" name="prayer">
+              <option value="">— Select —</option>
+              <option>Prayer over the phone</option>
+              <option>Prayer during visit</option>
+              <option>Pastoral visit</option>
+              <option>No, thank you</option>
+            </select>
+          </div>
+          <div class="col-12" id="careNotesWrap" style="display: none">
+            <label for="careNotes">Care notes (optional)</label>
+            <textarea
+              id="careNotes"
+              name="careNotes"
+              placeholder="Anything you’d like us to know or pray for"
+            ></textarea>
+          </div>
+        </div>
 
         <!-- 7. Consent -->
 
-          <legend>7) Consent</legend>
-          <p class="disclaimer">
-            <strong>Service disclaimer:</strong> The Handyman Ministry provides
-            volunteer-based assistance and is not a licensed contractor. By
-            submitting, you release <em>[Church Name]</em> and its volunteers
-            from liability for volunteer services performed.
-          </p>
-          <label class="inline">
-            <input type="checkbox" id="consent" name="consent" required />
-            <span class="required">I understand and agree.</span>
-          </label>
-          <label class="inline" style="margin-top: 0.5rem">
-            <input type="checkbox" id="mediaConsent" name="mediaConsent" />
-            <span
-              >Optional: You may share my story/photos to encourage
-              others.</span
-            >
-          </label>
-
+        <legend>7) Consent</legend>
+        <p class="disclaimer">
+          <strong>Service disclaimer:</strong> The Handyman Ministry provides
+          volunteer-based assistance and is not a licensed contractor. By
+          submitting, you release <em>[Church Name]</em> and its volunteers from
+          liability for volunteer services performed.
+        </p>
+        <label class="inline">
+          <input type="checkbox" id="consent" name="consent" required />
+          <span class="required">I understand and agree.</span>
+        </label>
+        <label class="inline" style="margin-top: 0.5rem">
+          <input type="checkbox" id="mediaConsent" name="mediaConsent" />
+          <span
+            >Optional: You may share my story/photos to encourage others.</span
+          >
+        </label>
 
         <!-- Anti-spam honeypot -->
         <div class="visually-hidden">
