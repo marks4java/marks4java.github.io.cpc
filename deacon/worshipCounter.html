@@ -91,7 +91,7 @@
         <div class="card">
             <div class="section-header" onclick="toggleSection('bleacher')">
                 <i class="material-icons">expand_more</i>
-                <h2 class="mdc-typography--headline6">Bleacher Sections</h2>
+                <h2 class="mdc-typography--headline6">Gym Bleacher Sections</h2>
             </div>
             <div id="bleacher" class="section-content active">
                 <div class="mdc-text-field mdc-text-field--outlined input-field">
@@ -161,7 +161,7 @@
             </div>
             <div class="section-header" onclick="toggleSection('floor')">
                 <i class="material-icons">expand_more</i>
-                <h2 class="mdc-typography--headline6">Floor Sections</h2>
+                <h2 class="mdc-typography--headline6">Gym Floor Sections</h2>
             </div>
             <div id="floor" class="section-content active">
                 <div class="mdc-text-field mdc-text-field--outlined input-field">
@@ -180,6 +180,52 @@
                         <div class="mdc-notched-outline__leading"></div>
                         <div class="mdc-notched-outline__notch">
                             <label class="mdc-floating-label">Floor Section 2</label>
+                        </div>
+                        <div class="mdc-notched-outline__trailing"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="section-header" onclick="toggleSection('children')">
+                <i class="material-icons">expand_more</i>
+                <h2 class="mdc-typography--headline6">Children's Ministry</h2>
+            </div>
+            <div id="children" class="section-content active">
+                <div class="mdc-text-field mdc-text-field--outlined input-field">
+                    <input type="number" class="mdc-text-field__input" id="group9" oninput="updateTotal()">
+                    <div class="mdc-notched-outline">
+                        <div class="mdc-notched-outline__leading"></div>
+                        <div class="mdc-notched-outline__notch">
+                            <label class="mdc-floating-label">Children's Church & Leaders</label>
+                        </div>
+                        <div class="mdc-notched-outline__trailing"></div>
+                    </div>
+                </div>
+                <div class="mdc-text-field mdc-text-field--outlined input-field">
+                    <input type="number" class="mdc-text-field__input" id="group10" oninput="updateTotal()">
+                    <div class="mdc-notched-outline">
+                        <div class="mdc-notched-outline__leading"></div>
+                        <div class="mdc-notched-outline__notch">
+                            <label class="mdc-floating-label">Nursery & Leaders</label>
+                        </div>
+                        <div class="mdc-notched-outline__trailing"></div>
+                    </div>
+                </div>
+                <div class="mdc-text-field mdc-text-field--outlined input-field">
+                    <input type="number" class="mdc-text-field__input" id="group11" oninput="updateTotal()">
+                    <div class="mdc-notched-outline">
+                        <div class="mdc-notched-outline__leading"></div>
+                        <div class="mdc-notched-outline__notch">
+                            <label class="mdc-floating-label">Pre-Kindergarten & Leaders</label>
+                        </div>
+                        <div class="mdc-notched-outline__trailing"></div>
+                    </div>
+                </div>
+                <div class="mdc-text-field mdc-text-field--outlined input-field">
+                    <input type="number" class="mdc-text-field__input" id="group12" oninput="updateTotal()">
+                    <div class="mdc-notched-outline">
+                        <div class="mdc-notched-outline__leading"></div>
+                        <div class="mdc-notched-outline__notch">
+                            <label class="mdc-floating-label">Keystone Kids & Leaders</label>
                         </div>
                         <div class="mdc-notched-outline__trailing"></div>
                     </div>
