@@ -95,7 +95,7 @@
             </div>
             <div id="bleacher" class="section-content active">
                 <div class="mdc-text-field mdc-text-field--outlined input-field">
-                    <input type="number" class="mdc-text-field__input" id="bleacher1" oninput="updateTotal()">
+                    <input type="number" class="mdc-text-field__input" id="group1" oninput="updateTotal()">
                     <div class="mdc-notched-outline">
                         <div class="mdc-notched-outline__leading"></div>
                         <div class="mdc-notched-outline__notch">
@@ -105,7 +105,7 @@
                     </div>
                 </div>
                 <div class="mdc-text-field mdc-text-field--outlined input-field">
-                    <input type="number" class="mdc-text-field__input" id="bleacher2" oninput="updateTotal()">
+                    <input type="number" class="mdc-text-field__input" id="group2" oninput="updateTotal()">
                     <div class="mdc-notched-outline">
                         <div class="mdc-notched-outline__leading"></div>
                         <div class="mdc-notched-outline__notch">
@@ -116,7 +116,7 @@
                 </div>
 
                 <div class="mdc-text-field mdc-text-field--outlined input-field">
-                    <input type="number" class="mdc-text-field__input" id="bleacher3" oninput="updateTotal()">
+                    <input type="number" class="mdc-text-field__input" id="group3" oninput="updateTotal()">
                     <div class="mdc-notched-outline">
                         <div class="mdc-notched-outline__leading"></div>
                         <div class="mdc-notched-outline__notch">
@@ -127,7 +127,7 @@
                 </div>
 
                 <div class="mdc-text-field mdc-text-field--outlined input-field">
-                    <input type="number" class="mdc-text-field__input" id="bleacher4" oninput="updateTotal()">
+                    <input type="number" class="mdc-text-field__input" id="group4" oninput="updateTotal()">
                     <div class="mdc-notched-outline">
                         <div class="mdc-notched-outline__leading"></div>
                         <div class="mdc-notched-outline__notch">
@@ -138,7 +138,7 @@
                 </div>
 
                 <div class="mdc-text-field mdc-text-field--outlined input-field">
-                    <input type="number" class="mdc-text-field__input" id="bleacher5" oninput="updateTotal()">
+                    <input type="number" class="mdc-text-field__input" id="group5" oninput="updateTotal()">
                     <div class="mdc-notched-outline">
                         <div class="mdc-notched-outline__leading"></div>
                         <div class="mdc-notched-outline__notch">
@@ -149,7 +149,7 @@
                 </div>
 
                 <div class="mdc-text-field mdc-text-field--outlined input-field">
-                    <input type="number" class="mdc-text-field__input" id="bleacher6" oninput="updateTotal()">
+                    <input type="number" class="mdc-text-field__input" id="group6" oninput="updateTotal()">
                     <div class="mdc-notched-outline">
                         <div class="mdc-notched-outline__leading"></div>
                         <div class="mdc-notched-outline__notch">
@@ -165,7 +165,7 @@
             </div>
             <div id="floor" class="section-content active">
                 <div class="mdc-text-field mdc-text-field--outlined input-field">
-                    <input type="number" class="mdc-text-field__input" id="floor1" oninput="updateTotal()">
+                    <input type="number" class="mdc-text-field__input" id="group7" oninput="updateTotal()">
                     <div class="mdc-notched-outline">
                         <div class="mdc-notched-outline__leading"></div>
                         <div class="mdc-notched-outline__notch">
@@ -175,7 +175,7 @@
                     </div>
                 </div>
                 <div class="mdc-text-field mdc-text-field--outlined input-field">
-                    <input type="number" class="mdc-text-field__input" id="floor2" oninput="updateTotal()">
+                    <input type="number" class="mdc-text-field__input" id="group8" oninput="updateTotal()">
                     <div class="mdc-notched-outline">
                         <div class="mdc-notched-outline__leading"></div>
                         <div class="mdc-notched-outline__notch">
@@ -206,7 +206,7 @@
 
             // Select all number inputs whose id starts with 'bleacher' or 'floor'
             const inputs = Array.from(document.querySelectorAll('input[type="number"]'))
-                .filter(el => /^bleacher\d+$/.test(el.id) || /^floor\d+$/.test(el.id));
+                .filter(el => /^group\d+$/.test(el.id));
 
             for (const input of inputs) {
                 const value = parseInt(input.value, 10);
