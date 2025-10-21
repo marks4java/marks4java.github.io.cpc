@@ -91,9 +91,19 @@
         <div class="card">
             <div class="section-header" onclick="toggleSection('bleacher')">
                 <i class="material-icons">expand_more</i>
-                <h2 class="mdc-typography--headline6">Gym Bleacher Sections</h2>
+                <h2 class="mdc-typography--headline6">Gym Sections</h2>
             </div>
             <div id="bleacher" class="section-content active">
+                <div class="mdc-text-field mdc-text-field--outlined input-field">
+                    <input type="number" class="mdc-text-field__input" id="group13" oninput="updateTotal()">
+                    <div class="mdc-notched-outline">
+                        <div class="mdc-notched-outline__leading"></div>
+                        <div class="mdc-notched-outline__notch">
+                            <label class="mdc-floating-label">Worship Team (Stage)</label>
+                        </div>
+                        <div class="mdc-notched-outline__trailing"></div>
+                    </div>
+                </div>
                 <div class="mdc-text-field mdc-text-field--outlined input-field">
                     <input type="number" class="mdc-text-field__input" id="group1" oninput="updateTotal()">
                     <div class="mdc-notched-outline">
@@ -158,12 +168,6 @@
                         <div class="mdc-notched-outline__trailing"></div>
                     </div>
                 </div>
-            </div>
-            <div class="section-header" onclick="toggleSection('floor')">
-                <i class="material-icons">expand_more</i>
-                <h2 class="mdc-typography--headline6">Gym Floor Sections</h2>
-            </div>
-            <div id="floor" class="section-content active">
                 <div class="mdc-text-field mdc-text-field--outlined input-field">
                     <input type="number" class="mdc-text-field__input" id="group7" oninput="updateTotal()">
                     <div class="mdc-notched-outline">
@@ -226,6 +230,62 @@
                         <div class="mdc-notched-outline__leading"></div>
                         <div class="mdc-notched-outline__notch">
                             <label class="mdc-floating-label">Keystone Kids & Leaders</label>
+                        </div>
+                        <div class="mdc-notched-outline__trailing"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="section-header" onclick="toggleSection('other')">
+                <i class="material-icons">expand_more</i>
+                <h2 class="mdc-typography--headline6">Other</h2>
+            </div>
+            <div id="other" class="section-content active">
+                <div class="mdc-text-field mdc-text-field--outlined input-field">
+                    <input type="number" class="mdc-text-field__input" id="group14" oninput="updateTotal()">
+                    <div class="mdc-notched-outline">
+                        <div class="mdc-notched-outline__leading"></div>
+                        <div class="mdc-notched-outline__notch">
+                            <label class="mdc-floating-label">A/V Support (Sound, Video, Slides)</label>
+                        </div>
+                        <div class="mdc-notched-outline__trailing"></div>
+                    </div>
+                </div>
+                <div class="mdc-text-field mdc-text-field--outlined input-field">
+                    <input type="number" class="mdc-text-field__input" id="group15" oninput="updateTotal()">
+                    <div class="mdc-notched-outline">
+                        <div class="mdc-notched-outline__leading"></div>
+                        <div class="mdc-notched-outline__notch">
+                            <label class="mdc-floating-label">Security Booth</label>
+                        </div>
+                        <div class="mdc-notched-outline__trailing"></div>
+                    </div>
+                </div>
+                <div class="mdc-text-field mdc-text-field--outlined input-field">
+                    <input type="number" class="mdc-text-field__input" id="group16" oninput="updateTotal()">
+                    <div class="mdc-notched-outline">
+                        <div class="mdc-notched-outline__leading"></div>
+                        <div class="mdc-notched-outline__notch">
+                            <label class="mdc-floating-label">Kitchen Help</label>
+                        </div>
+                        <div class="mdc-notched-outline__trailing"></div>
+                    </div>
+                </div>
+                <div class="mdc-text-field mdc-text-field--outlined input-field">
+                    <input type="number" class="mdc-text-field__input" id="group17" oninput="updateTotal()">
+                    <div class="mdc-notched-outline">
+                        <div class="mdc-notched-outline__leading"></div>
+                        <div class="mdc-notched-outline__notch">
+                            <label class="mdc-floating-label">Office Gathering Area</label>
+                        </div>
+                        <div class="mdc-notched-outline__trailing"></div>
+                    </div>
+                </div>
+                <div class="mdc-text-field mdc-text-field--outlined input-field">
+                    <input type="number" class="mdc-text-field__input" id="group18" oninput="updateTotal()">
+                    <div class="mdc-notched-outline">
+                        <div class="mdc-notched-outline__leading"></div>
+                        <div class="mdc-notched-outline__notch">
+                            <label class="mdc-floating-label">Counters (You!)</label>
                         </div>
                         <div class="mdc-notched-outline__trailing"></div>
                     </div>
